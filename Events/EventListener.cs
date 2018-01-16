@@ -13,12 +13,12 @@ namespace SOA
 
         void OnEnable()
         {
-            if (Event) Event.Register(Response.Invoke);
+            if (Event && Response != null) Event.Register(Response.Invoke);
         }
 
         void OnDisable()
         {
-            if (Event) Event.Unregister(Response.Invoke);
+            if (Event && Response != null) Event.Unregister(Response.Invoke);
         }
     }
 
@@ -31,12 +31,12 @@ namespace SOA
 
         void OnEnable()
         {
-            if (Event) Event.Register(Response.Invoke);
+            if (Event && Response != null) Event.Register(Response.Invoke);
         }
 
         void OnDisable()
         {
-            if (Event) Event.Unregister(Response.Invoke);
+            if (Event && Response != null) Event.Unregister(Response.Invoke);
         }
     }
 }
