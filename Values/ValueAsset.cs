@@ -10,30 +10,30 @@ namespace SOA
         [Multiline]
         public string Description = "";
 #endif
-        public bool SetPersistent;
+        public bool IsPersistent;
 
         [SerializeField]
-        T _persistentValue;
-
         T _value;
+
+        T _currentValue;
 
         public T Value
         {
             get
             {
-                return _value;
+                return IsPersistent ? _value : _currentValue;
             }
 
             set
             {
-                _value = value;
-                if (SetPersistent) _persistentValue = value;
+                if (IsPersistent) _value = value;
+                else _currentValue = value;
             }
         }
 
         void OnEnable()
         {
-            _value = _persistentValue;
+            if (!IsPersistent) _currentValue = _value;
         }
     }
 }
