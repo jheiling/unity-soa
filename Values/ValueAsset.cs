@@ -10,6 +10,30 @@ namespace SOA
         [Multiline]
         public string Description = "";
 #endif
-        public T Value;
+        public bool SetPersistent;
+
+        [SerializeField]
+        T _persistantValue;
+
+        T _value;
+
+        public T Value
+        {
+            get
+            {
+                return _value;
+            }
+
+            set
+            {
+                _value = value;
+                if (SetPersistent) _persistantValue = value;
+            }
+        }
+
+        void OnEnable()
+        {
+            _value = _persistantValue;
+        }
     }
 }
