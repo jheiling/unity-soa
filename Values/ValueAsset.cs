@@ -13,7 +13,7 @@ namespace SOA
         public bool SetPersistent;
 
         [SerializeField]
-        T _persistantValue;
+        T _persistentValue;
 
         T _value;
 
@@ -27,13 +27,13 @@ namespace SOA
             set
             {
                 _value = value;
-                if (SetPersistent) _persistantValue = value;
+                if (SetPersistent) _persistentValue = value;
             }
         }
 
         void OnEnable()
         {
-            _value = _persistantValue;
+            _value = _persistentValue;
         }
     }
 }
