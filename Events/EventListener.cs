@@ -6,9 +6,9 @@ using UnityEngine.Events;
 namespace SOA
 {
     [AddComponentMenu("SOA/Events/EventListener")]
-    public class SOEventListener : MonoBehaviour
+    public class EventListener : MonoBehaviour
     {
-        public SOEvent Event;
+        public EventAsset Event;
         public UnityEvent Response;
 
         void OnEnable()
@@ -24,7 +24,7 @@ namespace SOA
 
 
 
-    public abstract class SOEventListener<T, SE, UE> : MonoBehaviour where SE : SOEvent<T> where UE : UnityEvent<T>
+    public abstract class EventListener<T, SE, UE> : MonoBehaviour where SE : EventAsset<T> where UE : UnityEvent<T>
     {
         public SE Event;
         public UE Response;

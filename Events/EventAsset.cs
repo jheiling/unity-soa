@@ -4,8 +4,8 @@
 
 namespace SOA
 {
-    [CreateAssetMenu(fileName = "New Event", menuName = "SOA/Events/SOEvent", order = 0)]
-    public class SOEvent : ScriptableObject
+    [CreateAssetMenu(fileName = "New Event", menuName = "SOA/Events/EventAsset", order = 0)]
+    public class EventAsset : ScriptableObject
     {
         public delegate void Handler();
 
@@ -39,7 +39,7 @@ namespace SOA
 
 
 
-    public abstract class SOEvent<T> : ScriptableObject
+    public abstract class EventAsset<T> : ScriptableObject
     {
         public delegate void Handler(T value);
 

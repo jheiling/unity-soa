@@ -4,7 +4,7 @@
 
 namespace SOA
 {
-    [AddComponentMenu("SOA/Values/Float")]
+    [AddComponentMenu("SOA/Values/FloatComponent")]
     public class FloatComponent : ValueComponent<FloatReference>
     { }
 }
