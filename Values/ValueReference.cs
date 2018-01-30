@@ -7,10 +7,7 @@ namespace SOA
     public abstract class ValueReference<T, AT> where AT : ValueAsset<T>
     {
         public bool UseAsset;
-
-        [SerializeField]
-        T _value;
-
+        [SerializeField] T _value;
         public AT Asset;
 
         public ValueReference() { }
