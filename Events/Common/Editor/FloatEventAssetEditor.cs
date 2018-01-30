@@ -1,11 +1,9 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using UnityEditor;
 
 
 
 namespace SOA
 {
     [CustomEditor(typeof(FloatEventAsset))]
-    public class FloatEventAssetEditor : EventAssetEditor<float>
-    { }
+    public class FloatEventAssetEditor : EventAssetEditor<float> { }
 }

@@ -5,6 +5,5 @@
 namespace SOA
 {
     [AddComponentMenu("SOA/Values/TransformRegisterer")]
-    public class TransformRegisterer : ValueRegisterer<Transform, TransformAsset>
-    { }
+    public class TransformRegisterer : ValueRegisterer<Transform, TransformAsset> { }
 }

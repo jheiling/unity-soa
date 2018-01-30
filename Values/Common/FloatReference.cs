@@ -5,6 +5,5 @@
 namespace SOA
 {
     [Serializable]
-    public class FloatReference : ValueReference<float, FloatAsset>
-    { }
+    public class FloatReference : ValueReference<float, FloatAsset> { }
 }
